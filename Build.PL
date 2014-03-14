@@ -21,6 +21,7 @@ my $build = Module::Build->new(
   dist_abstract => 'Catmandu fix modules for parsing dates',
   requires => $requires,
   recommends => $recommends,
+  license => 'perl',
   create_license => 1
 );
 $build->create_build_script();
