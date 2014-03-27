@@ -9,6 +9,7 @@ my $requires = {
   'DateTime' => 0,
   'DateTime::Format::Strptime' => 0,
   'DateTime::TimeZone' => 0,
+  'Time::HiRes' => 0
 };
 my $recommends = {};
 
