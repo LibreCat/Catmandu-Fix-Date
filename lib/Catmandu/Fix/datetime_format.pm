@@ -99,13 +99,15 @@ sub emit {
   my $parser = $fixer->capture($self->_datetime_parser());
 
   $perl .= $fixer->emit_walk_path($fixer->var,$source,sub{
+
     my $pvar = shift;
+
     $fixer->emit_get_key($pvar,$key, sub {
+
       my $var = shift;
       my $d = $fixer->generate_var();
 
-      my $p = "if(is_string($var)){";
-      $p .=   $fixer->emit_declare_vars($d);
+      my $p =   $fixer->emit_declare_vars($d);
       $p .=   " $d = ".${parser}."->parse_datetime($var);";  
       $p .=   " if($d){";    
       $p .=   "   $d->set_time_zone(${set_time_zone});";
@@ -116,9 +118,11 @@ sub emit {
       }elsif(defined($self->default)){
         $p .= " else { ${var} = ".$fixer->emit_string($self->default)."; }";
       }
-      $p .=   "}";
+
       $p;
+
     });
+
   });
 
   $perl;
