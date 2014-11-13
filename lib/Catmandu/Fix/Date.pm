@@ -15,11 +15,18 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 
     L<Catmandu::Fix::datetime_format>
     L<Catmandu::Fix::timestamp>
+    L<Catmandu::Fix::start_day>
+    L<Catmandu::Fix::end_day>
+    L<Catmandu::Fix::start_week>
+    L<Catmandu::Fix::end_week>
+    L<Catmandu::Fix::start_year>
+    L<Catmandu::Fix::end_year>
+
 
 =head1 SEE ALSO
 
-  L<Catmandu::Fix::datetime_format>
-  L<Catmandu::Fix::timestamp>
+  L<Catmandu::Fix>
+  L<Catmandu>
 
 =cut
 
