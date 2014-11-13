@@ -4,7 +4,7 @@ use Module::Build;
 
 my $requires = {
   perl => '5.10.1',
-  Catmandu => 0,  
+  Catmandu => 0,
   'Moo' => 0,
   'DateTime' => 0,
   'DateTime::Format::Strptime' => 0,
@@ -15,7 +15,7 @@ my $recommends = {};
 
 my $build = Module::Build->new(
   module_name => 'Catmandu-Fix-Date',
-  dist_version_from => 'lib/Catmandu/Fix/Date.pm',  
+  dist_version_from => 'lib/Catmandu/Fix/Date.pm',
   dist_author => [qw(
     nicolas.franck@ugent.be
   )],
