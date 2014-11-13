@@ -28,6 +28,14 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
   L<Catmandu::Fix>
   L<Catmandu>
 
+=head1 LICENSE AND COPYRIGHT
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See L<http://dev.perl.org/licenses/> for more information.
+
 =cut
 
 1;
