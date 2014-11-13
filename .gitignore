@@ -9,3 +9,5 @@ Makefile.PL
 META.*
 MYMETA.*
 test/
+Catmandu-Fix-Date-*
+_build_params
