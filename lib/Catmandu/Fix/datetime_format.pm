@@ -120,18 +120,28 @@ has _datetime_parser => (
         );
     }
 );
-
+sub _get_locale {
+    state $l = {};
+    my $name = $_[0];
+    $l->{$name} ||= DateTime::Locale->load($name);
+}
+sub _get_time_zone {
+    state $t = {};
+    my $name = $_[0];
+    say "num keys :".(scalar(keys %$t));
+    $t->{$name} = DateTime::TimeZone->new( name => $name );
+}
 sub _build_locale {
-    DateTime::Locale->load($_[0]->locale);
+    _get_locale($_[0]->locale);
 }
 sub _build_set_locale {
-    DateTime::Locale->load($_[0]->set_locale);
+    _get_locale($_[0]->set_locale);
 }
 sub _build_time_zone {
-    DateTime::TimeZone->new( name => $_[0]->time_zone ),
+    _get_time_zone( $_[0]->time_zone );
 }
 sub _build_set_time_zone {
-    DateTime::TimeZone->new( name => $_[0]->time_zone ),
+    _get_time_zone( $_[0]->set_time_zone );
 }
 around BUILDARGS => sub {
     my($orig,$class,$source,%args) = @_;
