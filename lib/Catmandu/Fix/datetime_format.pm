@@ -6,7 +6,7 @@ use DateTime::Format::Strptime;
 use DateTime::TimeZone;
 use DateTime::Locale;
 use DateTime;
-our $VERSION = "0.0122";
+our $VERSION = "0.0123";
 
 with 'Catmandu::Fix::Base';
 
@@ -128,7 +128,6 @@ sub _get_locale {
 sub _get_time_zone {
     state $t = {};
     my $name = $_[0];
-    say "num keys :".(scalar(keys %$t));
     $t->{$name} = DateTime::TimeZone->new( name => $name );
 }
 sub _build_locale {
