@@ -6,7 +6,7 @@ use DateTime::Format::Strptime;
 use DateTime::TimeZone;
 use DateTime::Locale;
 use DateTime;
-our $VERSION = "0.0123";
+our $VERSION = "0.0125";
 
 with 'Catmandu::Fix::Base';
 
@@ -27,7 +27,7 @@ has locale => (
         check_string($_[0]);
     },
     default => sub {
-        "en_EN"
+        "en_US"
     }
 );
 has _locale => (
@@ -43,7 +43,7 @@ has set_locale => (
         check_string($_[0]);
     },
     default => sub {
-        "en_EN"
+        "en_US"
     }
 );
 has _set_locale => (
@@ -179,12 +179,14 @@ sub emit {
 
             #no parsing needed (fast)
             if($self->source_pattern() =~ /\s*%s\s*/o){
-                $p .= " ${var} =~ s\/^\\s+|\\s+\$\/\/go;";
-                $p .= " $d = DateTime->from_epoch(epoch => ${var},time_zone => ${time_zone},locale => ${locale});";
+                $p .= "if( is_string(${var}) ) {";
+                $p .= "     ${var} =~ s\/^\\s+|\\s+\$\/\/go;";
+                $p .= "     $d = DateTime->from_epoch(epoch => ${var},time_zone => ${time_zone},locale => ${locale});";
+                $p .= "}"
             }
             #parsing needed (slow)
             else{
-                $p .= " $d = ".${parser}."->parse_datetime($var);";
+                $p .= " $d = ".${parser}."->parse_datetime($var) if is_string(${var});";
             }
             $p .= " if($d){";
             $p .= "   $d->set_time_zone(${set_time_zone}) if ".${d}."->time_zone->name() ne ".${set_time_zone}."->name();";
@@ -212,7 +214,7 @@ sub emit {
 
 =head1 SYNOPSIS
 
-    datetime_format('timestamp','source_pattern' => '%s','destination_pattern' => '%Y-%m-%d','time_zone' => 'UTC','set_time_zone' => 'Europe/Brussels','delete' => 1,validate => 0,locale => 'en_EN',set_locale => 'nl_NL')
+    datetime_format('timestamp','source_pattern' => '%s','destination_pattern' => '%Y-%m-%d','time_zone' => 'UTC','set_time_zone' => 'Europe/Brussels','delete' => 1,validate => 0,locale => 'en_US',set_locale => 'nl_NL')
 
 =head1 OPTIONS
 
@@ -260,7 +262,7 @@ sub emit {
 
     For a complete list of locale codes see L<DateTime::Locale::Catalog>.
 
-    Default: en_EN
+    Default: en_US
 
 =item set_locale
 
@@ -270,7 +272,7 @@ sub emit {
 
     For a complete list of locale codes see L<DateTime::Locale::Catalog>.
 
-    Default: en_EN
+    Default: en_US
 
 =item delete
 

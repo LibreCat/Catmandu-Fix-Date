@@ -13,3 +13,4 @@ Catmandu-Fix-Date-*
 _build_params
 nytprof.out
 nytprof/
+local/

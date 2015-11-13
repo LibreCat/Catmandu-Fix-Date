@@ -1,3 +1,6 @@
+0.0125  2015-11-13
+  - set default locale to en_US instead of the non existing en_EN
+  - check if input variable for datetime_format is a string
 0.0124  2015-10-08
   - add fix Catmandu::Fix::split_date, which is a replacement for the deprecated package Catmandu::Fix::expand_date
 0.0123  2015-06-12
