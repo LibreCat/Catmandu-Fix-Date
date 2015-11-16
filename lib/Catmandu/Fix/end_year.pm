@@ -6,7 +6,7 @@ use DateTime::Format::Strptime;
 use DateTime::TimeZone;
 use DateTime;
 
-our $VERSION = "0.0125";
+our $VERSION = "0.0126";
 
 with 'Catmandu::Fix::Base';
 

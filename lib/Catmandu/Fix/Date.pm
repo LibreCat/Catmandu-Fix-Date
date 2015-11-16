@@ -1,6 +1,6 @@
 package Catmandu::Fix::Date;
 # ABSTRACT: Catmandu fixes for processing dates
-our $VERSION = "0.0125";
+our $VERSION = "0.0126";
 
 =head1 NAME
 

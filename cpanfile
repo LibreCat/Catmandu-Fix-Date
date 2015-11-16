@@ -1,5 +1,5 @@
 requires 'perl','5.10.1';
-requires 'Catmandu','0';
+requires 'Catmandu','0.9209';
 requires 'Moo','0';
 requires 'DateTime','0';
 requires 'DateTime::Format::Strptime','0';

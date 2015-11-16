@@ -1,3 +1,5 @@
+0.0126  2015-11-16
+  - require Catmandu '0.9209' to support Catmandu::Fix::SimpleGetValue
 0.0125  2015-11-13
   - set default locale to en_US instead of the non existing en_EN
   - check if input variable for datetime_format is a string
