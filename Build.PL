@@ -18,13 +18,13 @@ my %module_build_args = (
     "Nicolas Franck, C<< <nicolas.franck at ugent.be> >>"
   ],
   "dist_name" => "Catmandu-Fix-Date",
-  "dist_version" => "0.0125",
+  "dist_version" => "0.0126",
   "license" => "perl",
   "module_name" => "Catmandu::Fix::Date",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Catmandu" => 0,
+    "Catmandu" => "0.9209",
     "DateTime" => 0,
     "DateTime::Format::Strptime" => 0,
     "DateTime::TimeZone" => 0,
