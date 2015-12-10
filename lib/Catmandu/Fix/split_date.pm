@@ -39,11 +39,11 @@ Catmandu::Fix::split_date - split a date field into year, month and date
 =head1 SYNOPSIS
 
     # {date => "2001-09-11"}
-    expand_date('date')
+    split_date('date')
     # => { date => { year => 2001, month => "9", day => "11" } }
 
     # { datestamp => "2001:09" }
-    expand_date('datestamp')
+    split_date('datestamp')
     # => { datestamp => { year => 2001, month => "9" } }
 
 =head1 DESCRIPTION
