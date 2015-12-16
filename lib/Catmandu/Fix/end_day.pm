@@ -83,7 +83,7 @@ sub emit {
 
 =head1 NAME
 
-  Catmandu::Fix::end_day - Catmandu Fix retrieving date string for end of the day
+  Catmandu::Fix::end_day - Catmandu Fix retrieving date string for end of the current day
 
 =head1 SYNOPSIS
 

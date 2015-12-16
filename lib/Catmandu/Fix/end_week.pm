@@ -88,7 +88,7 @@ sub emit {
 
 =head1 NAME
 
-  Catmandu::Fix::end_week - Catmandu Fix for retrieving date string for end of the week
+  Catmandu::Fix::end_week - Catmandu Fix for retrieving date string for end of the current week
 
 =head1 SYNOPSIS
 

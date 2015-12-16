@@ -81,7 +81,7 @@ sub emit {
 
 =head1 NAME
 
-  Catmandu::Fix::start_day - Catmandu Fix for retrieving date string for start of the day
+  Catmandu::Fix::start_day - Catmandu Fix for retrieving date string for start of the current day
 
 =head1 SYNOPSIS
 

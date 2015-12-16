@@ -9,4 +9,7 @@ requires 'Time::HiRes','0';
 on 'test',sub {
     requires 'Test::More','0';
     requires 'Test::Exception','0';
+    requires 'POSIX','0';
+    requires 'DateTime','0';
+    requires 'Time::HiRes','0';
 };

@@ -98,7 +98,7 @@ sub emit {
 
 =head1 NAME
 
-  Catmandu::Fix::start_week - Catmandu Fix for retrieving date string for start of the week
+  Catmandu::Fix::start_week - Catmandu Fix for retrieving date string for start of the current week
 
 =head1 SYNOPSIS
 
