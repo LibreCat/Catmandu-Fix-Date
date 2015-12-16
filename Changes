@@ -1,3 +1,5 @@
+0.0127  2015-12-16
+  - add more tests
 0.0126  2015-11-16
   - require Catmandu '0.9209' to support Catmandu::Fix::SimpleGetValue
 0.0125  2015-11-13

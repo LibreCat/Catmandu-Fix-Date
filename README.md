@@ -2,12 +2,6 @@
 
     Catmandu::Fix::Date - Catmandu fixes for processing dates
 
-# STATUS
-
-[![Build Status](https://travis-ci.org/LibreCat/Catmandu-Fix-Date.svg?branch=master)](https://travis-ci.org/LibreCat/Catmandu-Fix-Date)
-[![Coverage](https://coveralls.io/repos/LibreCat/Catmandu-Fix-Date/badge.png?branch=master)](https://coveralls.io/r/LibreCat/Catmandu-Fix-Date)
-[![CPANTS kwalitee](http://cpants.cpanauthors.org/dist/Catmandu-Fix-Date.png)](http://cpants.cpanauthors.org/dist/Catmandu-Fix-Date)
-
 # AUTHOR
 
 Nicolas Franck, `<nicolas.franck at ugent.be>`
