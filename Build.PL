@@ -34,16 +34,22 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
+    "DateTime" => 0,
+    "POSIX" => 0,
     "Test::Exception" => 0,
-    "Test::More" => 0
+    "Test::More" => 0,
+    "Time::HiRes" => 0
   }
 );
 
 
 my %fallback_build_requires = (
+  "DateTime" => 0,
   "Module::Build" => "0.28",
+  "POSIX" => 0,
   "Test::Exception" => 0,
-  "Test::More" => 0
+  "Test::More" => 0,
+  "Time::HiRes" => 0
 );
 
 

@@ -18,6 +18,7 @@ Nicolas Franck, `<nicolas.franck at ugent.be>`
       L<Catmandu::Fix::end_week>
       L<Catmandu::Fix::start_year>
       L<Catmandu::Fix::end_year>
+      L<Catmandu::Fix::split_date>
 
 # SEE ALSO
 
