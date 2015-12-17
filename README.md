@@ -1,29 +1,34 @@
 # NAME
 
-    Catmandu::Fix::Date - Catmandu fixes for processing dates
+Catmandu::Fix::Date - Catmandu fixes for processing dates
+
+# SYNOPSIS
+
+    use Catmandu::Fix::Date;
+
+    # all fix functions are exported by default
+    my $item = { date => '2001-11-09' };
+    split_date($item, 'date');
+    # $item == { date => { year => 2001, month => 11, day => 9 } }
+
+# DESCRIPTION
+
+Catmandu::Fix::Date includes the following [Catmandu::Fix](https://metacpan.org/pod/Catmandu::Fix) functions for
+processing dates:
+
+- [Catmandu::Fix::datetime\_format](https://metacpan.org/pod/Catmandu::Fix::datetime_format)
+- [Catmandu::Fix::timestamp](https://metacpan.org/pod/Catmandu::Fix::timestamp)
+- [Catmandu::Fix::start\_day](https://metacpan.org/pod/Catmandu::Fix::start_day)
+- [Catmandu::Fix::end\_day](https://metacpan.org/pod/Catmandu::Fix::end_day)
+- [Catmandu::Fix::start\_week](https://metacpan.org/pod/Catmandu::Fix::start_week)
+- [Catmandu::Fix::end\_week](https://metacpan.org/pod/Catmandu::Fix::end_week)
+- [Catmandu::Fix::start\_year](https://metacpan.org/pod/Catmandu::Fix::start_year)
+- [Catmandu::Fix::end\_year](https://metacpan.org/pod/Catmandu::Fix::end_year)
+- [Catmandu::Fix::split\_date](https://metacpan.org/pod/Catmandu::Fix::split_date)
 
 # AUTHOR
 
 Nicolas Franck, `<nicolas.franck at ugent.be>`
-
-# SYNOPSIS
-
-    For documentation on these fixes see:
-
-      L<Catmandu::Fix::datetime_format>
-      L<Catmandu::Fix::timestamp>
-      L<Catmandu::Fix::start_day>
-      L<Catmandu::Fix::end_day>
-      L<Catmandu::Fix::start_week>
-      L<Catmandu::Fix::end_week>
-      L<Catmandu::Fix::start_year>
-      L<Catmandu::Fix::end_year>
-      L<Catmandu::Fix::split_date>
-
-# SEE ALSO
-
-    L<Catmandu::Fix>
-    L<Catmandu>
 
 # LICENSE AND COPYRIGHT
 
