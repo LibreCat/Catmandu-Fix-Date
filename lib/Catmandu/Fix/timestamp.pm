@@ -25,9 +25,12 @@ sub emit {
 
 }
 
+1;
+__END__
+
 =head1 NAME
 
-  Catmandu::Fix::timestamp - Catmandu fix that stores the current unix time, in high resolution
+Catmandu::Fix::timestamp - Catmandu fix that stores the current unix time, in high resolution
 
 =head1 SYNOPSIS
 
@@ -43,5 +46,3 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 L<Catmandu::Fix>
 
 =cut
-
-1;

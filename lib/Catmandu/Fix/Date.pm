@@ -1,34 +1,62 @@
 package Catmandu::Fix::Date;
-# ABSTRACT: Catmandu fixes for processing dates
+use strict;
 our $VERSION = "0.0127";
+
+1;
+__END__
 
 =head1 NAME
 
-  Catmandu::Fix::Date - Catmandu fixes for processing dates
+Catmandu::Fix::Date - Catmandu fixes for processing dates
+
+=head1 SYNOPSIS
+
+Catmandu::Fix::Date includes the following L<Catmandu::Fix> functions for
+processing dates:
+
+=over
+
+=item
+
+L<Catmandu::Fix::datetime_format>
+
+=item 
+
+L<Catmandu::Fix::timestamp>
+
+=item 
+
+L<Catmandu::Fix::start_day>
+
+=item 
+
+L<Catmandu::Fix::end_day>
+
+=item
+
+L<Catmandu::Fix::start_week>
+
+=item
+
+L<Catmandu::Fix::end_week>
+
+=item
+
+L<Catmandu::Fix::start_year>
+
+=item
+
+L<Catmandu::Fix::end_year>
+
+=item
+
+L<Catmandu::Fix::split_date>
+
+=back
 
 =head1 AUTHOR
 
 Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
-
-=head1 SYNOPSIS
-
-  For documentation on these fixes see:
-
-    L<Catmandu::Fix::datetime_format>
-    L<Catmandu::Fix::timestamp>
-    L<Catmandu::Fix::start_day>
-    L<Catmandu::Fix::end_day>
-    L<Catmandu::Fix::start_week>
-    L<Catmandu::Fix::end_week>
-    L<Catmandu::Fix::start_year>
-    L<Catmandu::Fix::end_year>
-    L<Catmandu::Fix::split_date>
-
-
-=head1 SEE ALSO
-
-  L<Catmandu::Fix>
-  L<Catmandu>
 
 =head1 LICENSE AND COPYRIGHT
 
@@ -39,5 +67,3 @@ by the Free Software Foundation; or the Artistic License.
 See L<http://dev.perl.org/licenses/> for more information.
 
 =cut
-
-1;

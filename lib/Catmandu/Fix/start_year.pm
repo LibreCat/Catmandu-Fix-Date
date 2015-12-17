@@ -85,9 +85,12 @@ sub emit {
 
 }
 
+1;
+__END__
+
 =head1 NAME
 
-  Catmandu::Fix::start_year - Catmandu Fix for retrieving date string for start of the current year
+Catmandu::Fix::start_year - Catmandu Fix for retrieving date string for start of the current year
 
 =head1 SYNOPSIS
 
@@ -106,5 +109,3 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 L<Catmandu::Fix>
 
 =cut
-
-1;

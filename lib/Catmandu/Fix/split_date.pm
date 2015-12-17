@@ -31,6 +31,7 @@ EOF
 }
 
 1;
+__END__
 
 =head1 NAME
 
@@ -38,18 +39,25 @@ Catmandu::Fix::split_date - split a date field into year, month and date
 
 =head1 SYNOPSIS
 
-    # {date => "2001-09-11"}
-    split_date('date')
-    # => { date => { year => 2001, month => "9", day => "11" } }
+  # {date => "2001-09-11"}
+  split_date('date')
+  # => { date => { year => 2001, month => "9", day => "11" } }
 
-    # { datestamp => "2001:09" }
-    split_date('datestamp')
-    # => { datestamp => { year => 2001, month => "9" } }
+  # { datestamp => "2001:09" }
+  split_date('datestamp')
+  # => { datestamp => { year => 2001, month => "9" } }
 
 =head1 DESCRIPTION
 
 The date field is expanded if it contains a year, optionally followed by
 numeric month and day, each separated by C<-> or C<:>.
 
+=head1 AUTHOR
+
+Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
+
+=head1 SEE ALSO
+
+L<Catmandu::Fix>
 
 =cut
