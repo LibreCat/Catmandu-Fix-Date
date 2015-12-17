@@ -96,9 +96,12 @@ sub emit {
 
 }
 
+1;
+__END__
+
 =head1 NAME
 
-  Catmandu::Fix::start_week - Catmandu Fix for retrieving date string for start of the current week
+Catmandu::Fix::start_week - Catmandu Fix for retrieving date string for start of the current week
 
 =head1 SYNOPSIS
 
@@ -117,5 +120,3 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 L<Catmandu::Fix>
 
 =cut
-
-1;

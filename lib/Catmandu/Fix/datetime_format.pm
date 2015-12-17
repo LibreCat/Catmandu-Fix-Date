@@ -208,13 +208,25 @@ sub emit {
     $perl;
 }
 
+1;
+__END__
+
 =head1 NAME
 
-    Catmandu::Fix::datetime_format - Catmandu Fix for converting between datetime formats
+Catmandu::Fix::datetime_format - Catmandu Fix for converting between datetime formats
 
 =head1 SYNOPSIS
 
-    datetime_format('timestamp','source_pattern' => '%s','destination_pattern' => '%Y-%m-%d','time_zone' => 'UTC','set_time_zone' => 'Europe/Brussels','delete' => 1,validate => 0,locale => 'en_US',set_locale => 'nl_NL')
+  datetime_format( 'timestamp', 
+    'source_pattern' => '%s',
+    'destination_pattern' => '%Y-%m-%d',
+    'time_zone' => 'UTC',
+    'set_time_zone' => 'Europe/Brussels',
+    'delete' => 1,
+    validate => 0,
+    locale => 'en_US',
+    set_locale => 'nl_NL'
+  )
 
 =head1 OPTIONS
 
@@ -222,77 +234,60 @@ sub emit {
 
 =item source_pattern
 
-    pattern of the source date string to parse
-
-    See L<http://search.cpan.org/~drolsky/DateTime-Format-Strptime-1.56/lib/DateTime/Format/Strptime.pm> for documentation
-
-    Default: '%s' (unix timestamp)
+Pattern of the source date string to parse. See L<DateTime::Format::Strptime>
+for documentation of the format. The default is C<%s> (Unix timestamp).
 
 =item destination_pattern
 
-    pattern of the destination date string. This is the way your datetime needs to be formatted.
-
-    Default: '%FT%T.%NZ' (UTC timestamp)
+Pattern of the destination date string. This is the way your datetime needs to
+be formatted. The default is C<%FT%T.%NZ> (UTC timestamp).
 
 =item time_zone
 
-    time zone of the source date string. In case the source date string does not contain any time zone information,
-    the parser will use this time_zone to interpret the date. When not set correctly, the resulting date string
-    will be wrong.
+Time zone of the source date string. In case the source date string does not
+contain any time zone information, the parser will use this time_zone to
+interpret the date. When not set correctly, the resulting date string will be
+wrong. The default value is C<UTC>. For a complete list of time zone codes see
+L<http://en.wikipedia.org/wiki/List_of_tz_database_time_zones>.
 
-    For a complete list of time zone codes see L<http://en.wikipedia.org/wiki/List_of_tz_database_time_zones>.
-
-    Default: 'UTC'.
-
-    Most parsers assume 'local', but this can lead to different results on different systems. 'local' simply
-    means the same time zone as the one configured on your system.
+Most parsers assume 'local', but this can lead to different results on
+different systems. 'local' simply means the same time zone as the one
+configured on your system.
 
 =item set_time_zone
 
-    reset the time zone for the destination string. This is usefull for converting dates between time zones
-
-    e.g. 'Europe/Brussels'
-
-    Default: 'UTC'
+Reset the time zone for the destination string. This is usefull for converting
+dates between time zones, e.g. C<Europe/Brussels>. The default value is C<UTC>.
 
 =item locale
 
-    language code for the source date string. This is only important when your date string
-    contains names of week days or months.
-
-    For a complete list of locale codes see L<DateTime::Locale::Catalog>.
-
-    Default: en_US
+Language code for the source date string. This is only important when your date
+string contains names of week days or months. For a complete list of locale
+codes see L<DateTime::Locale::Catalog>. The default value is C<en_US>.
 
 =item set_locale
 
-    language code for the destination date string. This is only important when your destination date string
-    contains codes for names of week days or months ('%a','%A','%b','%B' and '%h'). This is usefull for
-    converting dates between languages.
-
-    For a complete list of locale codes see L<DateTime::Locale::Catalog>.
-
-    Default: en_US
+Language code for the destination date string. This is only important when your
+destination date string contains codes for names of week days or months (C<%a>,
+C<%A>, C<%b>, C<%B>, and C<%h>). This is usefull for converting dates between
+languages.  For a complete list of locale codes see
+L<DateTime::Locale::Catalog>.  The default value is C<en_US>.
 
 =item delete
 
-    Delete the key when the source date string cannot be parsed. When used, the option 'default' is ignored.
-
-    Default: 0
+Delete the key when the source date string cannot be parsed. When used, the
+option C<default> is ignored. Disabled (C<0>) by default.
 
 =item default
 
-    Set the value of the destination string to this value, when parsing fails.
-
-    Default: undef
-
-    By default both the options 'delete' and 'default' are not set, which means that the destination date string will not be created.
+Set the value of the destination string to this value, when parsing fails.  By
+default both the options C<delete> and C<default> are not set, which means that
+the destination date string will not be created. Not set (C<undef>) by default.
 
 =item validate
 
-    Validate source date string when parsing. Set this to zero to increase speed.
-
-    Default: 0
+Validate source date string when parsing. Disabled (C<0>) by default to
+increase speed.
 
 =back
 
@@ -305,5 +300,3 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 L<Catmandu::Fix>
 
 =cut
-
-1;

@@ -81,9 +81,12 @@ sub emit {
 
 }
 
+1;
+__END__
+
 =head1 NAME
 
-  Catmandu::Fix::end_day - Catmandu Fix retrieving date string for end of the current day
+Catmandu::Fix::end_day - Catmandu Fix retrieving date string for end of the current day
 
 =head1 SYNOPSIS
 
@@ -102,5 +105,3 @@ Nicolas Franck, C<< <nicolas.franck at ugent.be> >>
 L<Catmandu::Fix>
 
 =cut
-
-1;
