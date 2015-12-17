@@ -2,6 +2,29 @@ package Catmandu::Fix::Date;
 use strict;
 our $VERSION = "0.0127";
 
+use parent 'Exporter';
+our @EXPORT;
+@EXPORT = qw(
+    datetime_format
+    end_day
+    end_week
+    end_year
+    split_date
+    start_day
+    start_week
+    start_year
+    timestamp
+);
+
+foreach my $fix (@EXPORT) {
+    eval <<EVAL; ## no critic
+        require Catmandu::Fix::$fix; 
+        Catmandu::Fix::$fix ->import( as => '$fix' );
+EVAL
+    die "Failed to use Catmandu::Fix::$fix\n" if $@;
+}
+
+
 1;
 __END__
 
@@ -10,6 +33,15 @@ __END__
 Catmandu::Fix::Date - Catmandu fixes for processing dates
 
 =head1 SYNOPSIS
+
+  use Catmandu::Fix::Date;
+  
+  # all fix functions are exported by default
+  my $item = { date => '2001-11-09' };
+  split_date($item, 'date');
+  # $item == { date => { year => 2001, month => 11, day => 9 } }
+
+=head1 DESCRIPTION
 
 Catmandu::Fix::Date includes the following L<Catmandu::Fix> functions for
 processing dates:
