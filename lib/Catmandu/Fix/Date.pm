@@ -18,7 +18,7 @@ our @EXPORT;
 
 foreach my $fix (@EXPORT) {
     eval <<EVAL; ## no critic
-        require Catmandu::Fix::$fix; 
+        require Catmandu::Fix::$fix;
         Catmandu::Fix::$fix ->import( as => '$fix' );
 EVAL
     die "Failed to use Catmandu::Fix::$fix\n" if $@;
@@ -35,7 +35,7 @@ Catmandu::Fix::Date - Catmandu fixes for processing dates
 =head1 SYNOPSIS
 
   use Catmandu::Fix::Date;
-  
+
   # all fix functions are exported by default
   my $item = { date => '2001-11-09' };
   split_date($item, 'date');
@@ -52,15 +52,15 @@ processing dates:
 
 L<Catmandu::Fix::datetime_format>
 
-=item 
+=item
 
 L<Catmandu::Fix::timestamp>
 
-=item 
+=item
 
 L<Catmandu::Fix::start_day>
 
-=item 
+=item
 
 L<Catmandu::Fix::end_day>
 

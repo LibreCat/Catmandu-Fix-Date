@@ -217,7 +217,7 @@ Catmandu::Fix::datetime_format - Catmandu Fix for converting between datetime fo
 
 =head1 SYNOPSIS
 
-  datetime_format( 'timestamp', 
+  datetime_format( 'timestamp',
     'source_pattern' => '%s',
     'destination_pattern' => '%Y-%m-%d',
     'time_zone' => 'UTC',
