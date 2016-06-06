@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.0129  2016-06-06 15:15:12 CEST
   - DateTime::Format::Strptime minimum version 1.68 (no eval parser anymore)
 0.0128  2015-12-17
   - cleanup documentation
