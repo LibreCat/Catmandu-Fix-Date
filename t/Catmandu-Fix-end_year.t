@@ -37,4 +37,4 @@ use_ok('DateTime::Format::Strptime');
     is_deeply( $got, $expected );
 }
 
-done_testing 5;
+done_testing 6;
