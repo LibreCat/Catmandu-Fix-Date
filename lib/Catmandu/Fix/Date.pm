@@ -1,6 +1,6 @@
 package Catmandu::Fix::Date;
 use strict;
-our $VERSION = "0.0129";
+our $VERSION = "0.0130";
 
 use parent 'Exporter';
 our @EXPORT;
