@@ -1,5 +1,5 @@
 {{$NEXT}}
-
+  - Fix leap second in test Catmandu-Fix-end_year.t by using DateTime::Format::Strptime instead of POSIX::strftime
 0.0129  2016-06-06 15:15:12 CEST
   - DateTime::Format::Strptime minimum version 1.68 (no eval parser anymore)
 0.0128  2015-12-17
