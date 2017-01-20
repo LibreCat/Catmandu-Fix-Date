@@ -307,12 +307,12 @@ Catmandu::Fix::datetime_diff - Catmandu Fix to compute difference in seconds bet
 =item start_pattern
 
 Pattern of the start date string to parse. See L<DateTime::Format::Strptime>
-for documentation of the format. The default is C<%FT%T.%NZ> (Unix timestamp).
+for documentation of the format. The default is C<%FT%T.%NZ> (UTC datetime string).
 
 =item end_pattern
 
 Pattern of the end date string. See L<DateTime::Format::Strptime>
-for documentation of the format. The default is C<%FT%T.%NZ> (Unix timestamp).
+for documentation of the format. The default is C<%FT%T.%NZ> (UTC datetime string).
 
 =item start_time_zone
 
@@ -354,12 +354,6 @@ codes see L<DateTime::Locale::Catalog>. The default value is C<en_US>.
 
 Delete the key when either start or end date string cannot be parsed. When used, the
 option C<default> is ignored. Disabled (C<0>) by default.
-
-=item default
-
-Set the value of the destination string to this value, when parsing fails.  By
-default both the options C<delete> and C<default> are not set, which means that
-the destination date string will not be created. Not set (C<undef>) by default.
 
 =item validate
 
