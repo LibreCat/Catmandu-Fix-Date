@@ -4,7 +4,7 @@ use Time::HiRes;
 use Moo;
 use Catmandu::Fix::Has;
 
-our $VERSION = "0.0130";
+our $VERSION = "0.0131";
 
 with 'Catmandu::Fix::Base';
 
