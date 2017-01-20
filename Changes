@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.0131  2017-01-20 13:18:24 CET
   - add fix Catmandu::Fix::datetime_diff
 0.0130  2016-08-08 08:55:18 CEST
   - Fix leap second in test Catmandu-Fix-end_year.t by using DateTime::Format::Strptime instead of POSIX::strftime
