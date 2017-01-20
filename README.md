@@ -23,6 +23,7 @@ Catmandu::Fix::Date includes the following [Catmandu::Fix](https://metacpan.org/
 processing dates:
 
 - [Catmandu::Fix::datetime\_format](https://metacpan.org/pod/Catmandu::Fix::datetime_format)
+- [Catmandu::Fix::datetime\_diff](https://metacpan.org/pod/Catmandu::Fix::datetime_diff)
 - [Catmandu::Fix::timestamp](https://metacpan.org/pod/Catmandu::Fix::timestamp)
 - [Catmandu::Fix::start\_day](https://metacpan.org/pod/Catmandu::Fix::start_day)
 - [Catmandu::Fix::end\_day](https://metacpan.org/pod/Catmandu::Fix::end_day)
