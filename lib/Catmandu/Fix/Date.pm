@@ -6,6 +6,7 @@ use parent 'Exporter';
 our @EXPORT;
 @EXPORT = qw(
     datetime_format
+    datetime_diff
     end_day
     end_week
     end_year
@@ -61,6 +62,10 @@ processing dates:
 =item
 
 L<Catmandu::Fix::datetime_format>
+
+=item
+
+L<Catmandu::Fix::datetime_diff>
 
 =item
 
