@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - use DateTime strftime instead of DateTime::Parser::Strptime::strftime to support locale
 
 0.0131  2017-01-20 13:18:24 CET
   - add fix Catmandu::Fix::datetime_diff
